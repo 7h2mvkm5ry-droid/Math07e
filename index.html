@@ -3,37 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MatheTrainer 7</title>
+    <title>MatheTrainer 7 – Terme</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
 
-    <h1>📚 MatheTrainer 7</h1>
+    <header>
+        <h1>📚 MatheTrainer 7</h1>
 
-    <h2>Werte von Termen berechnen</h2>
+        <div id="punkteAnzeige">
+            ⭐ Punkte: <span id="punkte">0</span>
+        </div>
+    </header>
 
-    <p>
-        Berechne den Wert des Terms:
-    </p>
+    <!-- Hauptmenü -->
 
-    <h3 id="aufgabe">3x + 5</h3>
+    <section id="menu">
 
-    <p>
-        für x = <span id="wert">4</span>
-    </p>
+        <button onclick="starteBerechnen()">
+            Werte von Termen
+        </button>
 
-    <input
-        type="number"
-        id="antwort"
-        placeholder="Antwort eingeben">
+        <button onclick="starteAufstellen()">
+            Terme aufstellen
+        </button>
 
-    <button onclick="pruefen()">
-        Prüfen
-    </button>
+        <button onclick="starteVergleichen()">
+            Terme vergleichen
+        </button>
 
-    <p id="ergebnis"></p>
+        <button onclick="starteGleichungen()">
+            Gleichungen lösen
+        </button>
+
+        <button onclick="starteDenkaufgaben()">
+            🧠 Denkaufgaben
+        </button>
+
+    </section>
+
+    <!-- Trainer -->
+
+    <section id="trainer" style="display:none;">
+
+        <h2 id="titel"></h2>
+
+        <div id="aufgabe"></div>
+
+        <div id="antwortBereich">
+
+            <input
+                id="antwort"
+                type="text"
+                autocomplete="off"
+                placeholder="Antwort eingeben">
+
+        </div>
+
+        <div id="multipleChoiceBereich"
+             style="display:none;">
+
+            <button class="antwortButton"
+                    id="antwortA">
+            </button>
+
+            <button class="antwortButton"
+                    id="antwortB">
+            </button>
+
+            <button class="antwortButton"
+                    id="antwortC">
+            </button>
+
+            <button class="antwortButton"
+                    id="antwortD">
+            </button>
+
+        </div>
+
+        <button id="pruefButton"
+                onclick="pruefen()">
+            Prüfen
+        </button>
+
+        <div id="feedback"></div>
+
+        <button onclick="naechsteAufgabe()">
+            Nächste Aufgabe
+        </button>
+
+        <button onclick="zurueckZumMenue()">
+            ⬅ Hauptmenü
+        </button>
+
+    </section>
 
 </div>
 
