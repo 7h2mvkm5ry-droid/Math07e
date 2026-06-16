@@ -1,102 +1,170 @@
 body{
-    margin:0;
-    padding:20px;
-    background:#f3f6fb;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+background:#eef2f7;
+font-family:Segoe UI, Arial, sans-serif;
+color:#1e293b;
 }
 
 .container{
-    max-width:800px;
-    margin:auto;
+max-width:900px;
+margin:auto;
+padding:0 20px 40px 20px;
 }
 
 header{
-    text-align:center;
-    margin-bottom:25px;
+background:linear-gradient(135deg,#0f5c5c,#134e4a);
+color:white;
+text-align:center;
+padding:40px 20px;
+border-radius:0 0 28px 28px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+margin-bottom:30px;
 }
 
 h1{
-    margin-bottom:10px;
+margin:0;
+font-size:40px;
 }
 
 #punkteAnzeige{
-    font-size:20px;
-    font-weight:bold;
+margin-top:15px;
+display:inline-block;
+background:rgba(255,255,255,0.15);
+padding:12px 24px;
+border-radius:999px;
+font-size:22px;
+font-weight:bold;
 }
 
 #menu{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-button{
-    width:100%;
-    padding:18px;
-    border:none;
-    border-radius:12px;
-    font-size:18px;
-    cursor:pointer;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
 }
 
 #menu button{
-    background:#2563eb;
-    color:white;
+background:white;
+color:#134e4a;
+border:none;
+border-radius:22px;
+padding:28px;
+font-size:22px;
+font-weight:600;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+transition:all 0.2s ease;
+}
+
+#menu button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+#trainer{
+background:white;
+padding:30px;
+border-radius:24px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+#titel{
+text-align:center;
+margin-top:0;
+color:#134e4a;
+}
+
+#aufgabe{
+font-size:30px;
+line-height:1.6;
+text-align:center;
+margin:35px 0;
+}
+
+#antwort{
+width:100%;
+padding:18px;
+border:2px solid #d6dde7;
+border-radius:16px;
+font-size:22px;
+box-sizing:border-box;
+}
+
+#antwort:focus{
+outline:none;
+border-color:#14b8a6;
+}
+
+button{
+width:100%;
+padding:18px;
+border:none;
+border-radius:16px;
+font-size:20px;
+cursor:pointer;
+}
+
+#pruefButton{
+background:#14b8a6;
+color:white;
+font-weight:bold;
 }
 
 #trainer button{
-    margin-top:12px;
+margin-top:14px;
+}
+
+#feedback{
+margin-top:25px;
+min-height:60px;
+text-align:center;
+font-size:24px;
+}
+
+.antwortButton{
+background:white;
+color:#1e293b;
+border:2px solid #d6dde7;
+}
+
+.antwortButton:hover
+
+#multipleChoiceBereich{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+@media(max-width:700px){
+
+```
+.container{
+    padding:0 15px 30px 15px;
+}
+
+header{
+    padding:30px 15px;
+}
+
+h1{
+    font-size:32px;
+}
+
+#menu{
+    grid-template-columns:1fr;
+}
+
+#menu button{
+    font-size:20px;
+    padding:22px;
 }
 
 #aufgabe{
     font-size:24px;
-    line-height:1.5;
-    margin:25px 0;
-    text-align:center;
 }
 
-#antwort{
-    width:100%;
-    padding:15px;
-    font-size:20px;
-    box-sizing:border-box;
+#trainer{
+    padding:20px;
 }
+```
 
-#feedback{
-    margin-top:20px;
-    min-height:60px;
-    font-size:22px;
-    text-align:center;
-}
-
-.antwortButton{
-    background:white;
-    border:2px solid #d0d7e2;
-    color:black;
-    margin-bottom:10px;
-}
-
-.antwortButton:hover{
-    background:#eef4ff;
-}
-
-#multipleChoiceBereich{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-@media (max-width:600px){
-
-    body{
-        padding:15px;
-    }
-
-    button{
-        font-size:20px;
-    }
-
-    #aufgabe{
-        font-size:22px;
-    }
 }
