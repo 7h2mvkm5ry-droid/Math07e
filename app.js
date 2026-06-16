@@ -414,53 +414,159 @@ document.getElementById("aufgabe").innerHTML=
 
 if(modus==="aufstellen"){
 
-let typ=Math.floor(Math.random()*3);
-
-
+let typ=Math.floor(Math.random()*25);
 
 if(typ===0){
-
-let a=Math.floor(Math.random()*7)+2;
-
-let b=Math.floor(Math.random()*9)+1;
-
-aktuelleLoesung=`${a}x+${b}`;
-
+aktuelleLoesung="x+5";
 document.getElementById("aufgabe").innerHTML=
-`Stelle einen Term auf:<br><br>Das ${a}-fache einer Zahl plus ${b}`;
-
+`Stelle einen Term auf:<br><br>Eine Zahl plus 5`;
 }
-
-
 
 if(typ===1){
-
-let b=Math.floor(Math.random()*9)+1;
-
-aktuelleLoesung=`x-${b}`;
-
+aktuelleLoesung="x-7";
 document.getElementById("aufgabe").innerHTML=
-`Stelle einen Term auf:<br><br>Eine Zahl vermindert um ${b}`;
-
+`Stelle einen Term auf:<br><br>Eine Zahl minus 7`;
 }
-
-
 
 if(typ===2){
-
-let a=Math.floor(Math.random()*5)+2;
-
-aktuelleLoesung=`${a}x`;
-
+aktuelleLoesung="2x";
 document.getElementById("aufgabe").innerHTML=
-`Stelle einen Term auf:<br><br>Das ${a}-fache einer Zahl`;
+`Stelle einen Term auf:<br><br>Das Doppelte einer Zahl`;
+}
 
+if(typ===3){
+aktuelleLoesung="3x";
+document.getElementById("aufgabe").innerHTML=
+`Stelle einen Term auf:<br><br>Das Dreifache einer Zahl`;
+}
+
+if(typ===4){
+aktuelleLoesung="4x";
+document.getElementById("aufgabe").innerHTML=
+`Stelle einen Term auf:<br><br>Das Vierfache einer Zahl`;
+}
+
+if(typ===5){
+aktuelleLoesung="x+8";
+document.getElementById("aufgabe").innerHTML=
+`Stelle einen Term auf:<br><br>Eine Zahl vermehrt um 8`;
+}
+
+if(typ===6){
+aktuelleLoesung="x-3";
+document.getElementById("aufgabe").innerHTML=
+`Stelle einen Term auf:<br><br>Eine Zahl vermindert um 3`;
+}
+
+if(typ===7){
+aktuelleLoesung="2x+5";
+document.getElementById("aufgabe").innerHTML=
+`Stelle einen Term auf:<br><br>Das Doppelte einer Zahl plus 5`;
+}
+
+if(typ===8){
+aktuelleLoesung="3x-4";
+document.getElementById("aufgabe").innerHTML=
+`Stelle einen Term auf:<br><br>Das Dreifache einer Zahl minus 4`;
+}
+
+if(typ===9){
+aktuelleLoesung="4x+9";
+document.getElementById("aufgabe").innerHTML=
+`Stelle einen Term auf:<br><br>Das Vierfache einer Zahl plus 9`;
+}
+
+if(typ===10){
+aktuelleLoesung="5x-2";
+document.getElementById("aufgabe").innerHTML=
+`Stelle einen Term auf:<br><br>Das Fünffache einer Zahl minus 2`;
+}
+
+if(typ===11){
+aktuelleLoesung="2x-8";
+document.getElementById("aufgabe").innerHTML=
+`Stelle einen Term auf:<br><br>Das Doppelte einer Zahl vermindert um 8`;
+}
+
+if(typ===12){
+aktuelleLoesung="3x+7";
+document.getElementById("aufgabe").innerHTML=
+`Stelle einen Term auf:<br><br>Das Dreifache einer Zahl vermehrt um 7`;
+}
+
+if(typ===13){
+aktuelleLoesung="x+5";
+document.getElementById("aufgabe").innerHTML=
+`Lisa hat 5 €. Dazu kommen x €. Stelle einen Term auf.`;
+}
+
+if(typ===14){
+aktuelleLoesung="x-3";
+document.getElementById("aufgabe").innerHTML=
+`Paul besitzt x Murmeln und verliert 3. Stelle einen Term auf.`;
+}
+
+if(typ===15){
+aktuelleLoesung="x+2";
+document.getElementById("aufgabe").innerHTML=
+`Ein Heft kostet x €. Dazu kommen 2 € Versand. Stelle einen Term auf.`;
+}
+
+if(typ===16){
+aktuelleLoesung="x+4";
+document.getElementById("aufgabe").innerHTML=
+`Ein Baum ist x m hoch und wächst um 4 m. Stelle einen Term auf.`;
+}
+
+if(typ===17){
+aktuelleLoesung="3x";
+document.getElementById("aufgabe").innerHTML=
+`Ein Ticket kostet x €. Drei Tickets werden gekauft. Stelle einen Term auf.`;
+}
+
+if(typ===18){
+aktuelleLoesung="x+5";
+document.getElementById("aufgabe").innerHTML=
+`Ein Handyvertrag kostet x € Grundgebühr und zusätzlich 5 €. Stelle einen Term auf.`;
+}
+
+if(typ===19){
+aktuelleLoesung="4x";
+document.getElementById("aufgabe").innerHTML=
+`Ein Quadrat hat die Seitenlänge x. Gib den Umfang als Term an.`;
+}
+
+if(typ===20){
+aktuelleLoesung="2x+10";
+document.getElementById("aufgabe").innerHTML=
+`Ein Rechteck hat die Seitenlängen x und 5. Gib den Umfang als Term an.`;
+}
+
+if(typ===21){
+aktuelleLoesung="4x";
+document.getElementById("aufgabe").innerHTML=
+`Ein Rechteck hat die Seitenlängen x und 4. Gib den Flächeninhalt als Term an.`;
+}
+
+if(typ===22){
+aktuelleLoesung="5x";
+document.getElementById("aufgabe").innerHTML=
+`Das Doppelte einer Zahl plus das Dreifache derselben Zahl. Stelle einen Term auf.`;
+}
+
+if(typ===23){
+aktuelleLoesung="2x";
+document.getElementById("aufgabe").innerHTML=
+`Das Vierfache einer Zahl minus das Doppelte derselben Zahl. Stelle einen Term auf.`;
+}
+
+if(typ===24){
+aktuelleLoesung="3x+3";
+document.getElementById("aufgabe").innerHTML=
+`Das Dreifache einer Zahl wird um 5 erhöht und anschließend um 2 vermindert. Stelle einen Term auf.`;
 }
 
 }
-
-
-
 if(modus==="vergleichen"){
 
 aktuelleLoesung="ja";
