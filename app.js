@@ -204,7 +204,7 @@ function starteVergleichen(){
 
 modus="vergleichen";
 
-zeigeTrainer("Terme vergleichen");
+zeigeTrainer("🔧 Terme vereinfachen");
 
 naechsteAufgabe();
 
@@ -569,17 +569,118 @@ document.getElementById("aufgabe").innerHTML=
 }
 if(modus==="vergleichen"){
 
-aktuelleLoesung="ja";
+txt.style.display="none";
+pruef.style.display="none";
+mc.style.display="block";
 
-let a=Math.floor(Math.random()*4)+2;
+let typ=Math.floor(Math.random()*12);
 
-let b=Math.floor(Math.random()*4)+2;
+let frage="";
+let richtig="";
+let falsch=[];
 
-document.getElementById("aufgabe").innerHTML=
-`Sind die Terme gleichwertig?<br><br><b>${a}x + ${b}x</b><br><br><b>${a+b}x</b><br><br>Antwort: ja oder nein`;
-
+if(typ===0){
+frage="2x + 3x";
+richtig="5x";
+falsch=["6x","2x","x"];
 }
 
+if(typ===1){
+frage="7x - 2x";
+richtig="5x";
+falsch=["9x","14x","x"];
+}
+
+if(typ===2){
+frage="x + x + x";
+richtig="3x";
+falsch=["x³","2x","4x"];
+}
+
+if(typ===3){
+frage="2x + 3 + 4x";
+richtig="6x + 3";
+falsch=["9x","6x","6x+7"];
+}
+
+if(typ===4){
+frage="5x - 2 + x + 7";
+richtig="6x + 5";
+falsch=["6x+9","5x+5","6x"];
+}
+
+if(typ===5){
+frage="2x + 3y + 4x";
+richtig="6x + 3y";
+falsch=["9xy","6xy","7x+y"];
+}
+
+if(typ===6){
+frage="5a + 2b - a";
+richtig="4a + 2b";
+falsch=["6ab","5a+b","4ab"];
+}
+
+if(typ===7){
+frage="2x² + 3x²";
+richtig="5x²";
+falsch=["5x","6x²","x²"];
+}
+
+if(typ===8){
+frage="7x³ - 2x³";
+richtig="5x³";
+falsch=["5x²","9x³","x³"];
+}
+
+if(typ===9){
+frage="3 · 2x";
+richtig="6x";
+falsch=["5x","6","x"];
+}
+
+if(typ===10){
+frage="12x : 3";
+richtig="4x";
+falsch=["9x","4","3x"];
+}
+
+if(typ===11){
+frage="2x · 3x";
+richtig="6x²";
+falsch=["5x²","6x","6x³"];
+}
+
+let antworten=[richtig,...falsch];
+
+antworten.sort(()=>Math.random()-0.5);
+
+aktuelleAufgabe={
+frage:frage,
+antworten:antworten,
+richtig:antworten.indexOf(richtig)
+};
+
+document.getElementById("aufgabe").innerHTML=
+`Vereinfache den Term:<br><br><b>${frage}</b>`;
+
+["A","B","C","D"].forEach(function(id,index){
+
+const button=
+document.getElementById("antwort"+id);
+
+button.innerText=
+aktuelleAufgabe.antworten[index];
+
+button.onclick=function(){
+
+pruefeMC(index);
+
+};
+
+});
+
+}
 
 
 if(modus==="gleichungen"){
