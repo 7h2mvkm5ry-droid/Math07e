@@ -573,7 +573,7 @@ txt.style.display="none";
 pruef.style.display="none";
 mc.style.display="block";
 
-let typ=Math.floor(Math.random()*15);
+let typ=Math.floor(Math.random()*30);
 
 let frage="";
 let richtig="";
@@ -874,7 +874,266 @@ falsch=[
 
 }
 
+if(typ===15){
 
+let a=2+Math.floor(Math.random()*8);
+let b=2+Math.floor(Math.random()*8);
+
+frage=`${a}x³ - ${b}x³`;
+
+richtig=`${a-b}x³`;
+
+falsch=[
+`${a+b}x³`,
+`${a-b}x²`,
+`${b}x³`
+];
+
+}
+
+if(typ===16){
+
+let a=2+Math.floor(Math.random()*5);
+let b=2+Math.floor(Math.random()*5);
+
+frage=`${a}a + ${b}b - ${a}a`;
+
+richtig=`${b}b`;
+
+falsch=[
+`${a+b}ab`,
+`${a}a`,
+`${b}a`
+];
+
+}
+
+if(typ===17){
+
+let a=2+Math.floor(Math.random()*5);
+let b=2+Math.floor(Math.random()*5);
+
+frage=`${a}x + ${b}y - ${a}x`;
+
+richtig=`${b}y`;
+
+falsch=[
+`${a+b}xy`,
+`${b}x`,
+`${a+b}y`
+];
+
+}
+
+if(typ===18){
+
+let a=2+Math.floor(Math.random()*5);
+let b=2+Math.floor(Math.random()*5);
+
+frage=`${a}x² + ${b}x² - ${a}x²`;
+
+richtig=`${b}x²`;
+
+falsch=[
+`${b}x`,
+`${a+b}x²`,
+`${b}x³`
+];
+
+}
+
+if(typ===19){
+
+let a=2+Math.floor(Math.random()*5);
+let b=2+Math.floor(Math.random()*5);
+
+frage=`${a}x³ + ${b}x³ - ${b}x³`;
+
+richtig=`${a}x³`;
+
+falsch=[
+`${a}x²`,
+`${a+b}x³`,
+`${b}x³`
+];
+
+}
+
+if(typ===20){
+
+let a=2+Math.floor(Math.random()*5);
+let b=2+Math.floor(Math.random()*5);
+
+frage=`${a}a · ${b}a`;
+
+richtig=`${a*b}a²`;
+
+falsch=[
+`${a+b}a²`,
+`${a*b}a`,
+`${a*b}a³`
+];
+
+}
+
+if(typ===21){
+
+let a=2+Math.floor(Math.random()*5);
+let b=2+Math.floor(Math.random()*5);
+
+frage=`${a}a² · ${b}a`;
+
+richtig=`${a*b}a³`;
+
+falsch=[
+`${a*b}a²`,
+`${a+b}a³`,
+`${a*b}a⁴`
+];
+
+}
+
+if(typ===22){
+
+let a=2+Math.floor(Math.random()*5);
+let b=2+Math.floor(Math.random()*5);
+
+frage=`${a}x · ${b}y`;
+
+richtig=`${a*b}xy`;
+
+falsch=[
+`${a+b}xy`,
+`${a*b}x`,
+`${a*b}y`
+];
+
+}
+
+if(typ===23){
+
+let a=2+Math.floor(Math.random()*5);
+let b=2+Math.floor(Math.random()*5);
+
+frage=`${a}x² · ${b}y`;
+
+richtig=`${a*b}x²y`;
+
+falsch=[
+`${a*b}xy`,
+`${a+b}x²y`,
+`${a*b}x²`
+];
+
+}
+
+if(typ===24){
+
+let b=2+Math.floor(Math.random()*5);
+let k=2+Math.floor(Math.random()*6);
+
+let a=b*k;
+
+frage=`${a}x³ : ${b}x²`;
+
+richtig=`${k}x`;
+
+falsch=[
+`${k}x²`,
+`${k}`,
+`${a+b}x`
+];
+
+}
+
+if(typ===25){
+
+let b=2+Math.floor(Math.random()*5);
+let k=2+Math.floor(Math.random()*6);
+
+let a=b*k;
+
+frage=`${a}a² : ${b}a`;
+
+richtig=`${k}a`;
+
+falsch=[
+`${k}`,
+`${k}a²`,
+`${a+b}a`
+];
+
+}
+
+if(typ===26){
+
+let a=2+Math.floor(Math.random()*5);
+let b=2+Math.floor(Math.random()*5);
+let c=2+Math.floor(Math.random()*5);
+
+frage=`${a}x² + ${b}x² - ${c}x`;
+
+richtig=`${a+b}x² - ${c}x`;
+
+falsch=[
+`${a+b-c}x²`,
+`${a+b}x`,
+`${a+b+c}x²`
+];
+
+}
+
+if(typ===27){
+
+let a=2+Math.floor(Math.random()*5);
+let b=2+Math.floor(Math.random()*5);
+let c=2+Math.floor(Math.random()*5);
+
+frage=`${a}x³ - ${b}x³ + ${c}x³`;
+
+richtig=`${a-b+c}x³`;
+
+falsch=[
+`${a+b+c}x³`,
+`${a-b+c}x²`,
+`${a*b*c}x³`
+];
+
+}
+
+if(typ===28){
+
+let a=2+Math.floor(Math.random()*5);
+let b=2+Math.floor(Math.random()*5);
+
+frage=`${a}x² + ${b}y + ${a}x²`;
+
+richtig=`${2*a}x² + ${b}y`;
+
+falsch=[
+`${a+b}x²`,
+`${2*a+b}x²`,
+`${2*a}xy`
+];
+
+}
+
+if(typ===29){
+
+let a=2+Math.floor(Math.random()*5);
+let b=2+Math.floor(Math.random()*5);
+
+frage=`${a}x · ${b}x²`;
+
+richtig=`${a*b}x³`;
+
+falsch=[
+`${a*b}x²`,
+`${a+b}x³`,
+`${a*b}x⁴`
+];
+
+}
 let antworten=[richtig,...falsch];
 
 antworten.sort(()=>Math.random()-0.5);
