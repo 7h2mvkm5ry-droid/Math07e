@@ -268,16 +268,145 @@ pruef.style.display="block";
 
 if(modus==="berechnen"){
 
-let a=Math.floor(Math.random()*8)+2;
+let typ = Math.floor(Math.random()*12);
+
+if(typ===0){
+
+let x=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(x+5);
+
+document.getElementById("aufgabe").innerHTML=
+`Berechne:<br><br><b>x + 5</b><br><br>für x = ${x}`;
+
+}
+
+if(typ===1){
+
+let x=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(x-4);
+
+document.getElementById("aufgabe").innerHTML=
+`Berechne:<br><br><b>x - 4</b><br><br>für x = ${x}`;
+
+}
+
+if(typ===2){
+
+let x=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(2*x);
+
+document.getElementById("aufgabe").innerHTML=
+`Berechne:<br><br><b>2x</b><br><br>für x = ${x}`;
+
+}
+
+if(typ===3){
+
+let x=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(3*x+5);
+
+document.getElementById("aufgabe").innerHTML=
+`Berechne:<br><br><b>3x + 5</b><br><br>für x = ${x}`;
+
+}
+
+if(typ===4){
+
+let x=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(10-2*x);
+
+document.getElementById("aufgabe").innerHTML=
+`Berechne:<br><br><b>10 - 2x</b><br><br>für x = ${x}`;
+
+}
+
+if(typ===5){
+
+let x=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(2*x+3*x);
+
+document.getElementById("aufgabe").innerHTML=
+`Berechne:<br><br><b>2x + 3x</b><br><br>für x = ${x}`;
+
+}
+
+if(typ===6){
+
+let x=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(4*x-x);
+
+document.getElementById("aufgabe").innerHTML=
+`Berechne:<br><br><b>4x - x</b><br><br>für x = ${x}`;
+
+}
+
+if(typ===7){
+
+let x=Math.floor(Math.random()*10)+1;
+
+let y=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(2*x+y);
+
+document.getElementById("aufgabe").innerHTML=
+`Berechne:<br><br><b>2x + y</b><br><br>x = ${x}<br>y = ${y}`;
+
+}
+
+if(typ===8){
+
+let x=Math.floor(Math.random()*10)+1;
+
+let y=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(3*x+2*y);
+
+document.getElementById("aufgabe").innerHTML=
+`Berechne:<br><br><b>3x + 2y</b><br><br>x = ${x}<br>y = ${y}`;
+
+}
+
+if(typ===9){
+
+let x=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(5+2*x+x);
+
+document.getElementById("aufgabe").innerHTML=
+`Berechne:<br><br><b>5 + 2x + x</b><br><br>für x = ${x}`;
+
+}
+
+if(typ===10){
+
+let x=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(20-5*x);
+
+document.getElementById("aufgabe").innerHTML=
+`Berechne:<br><br><b>20 - 5x</b><br><br>für x = ${x}`;
+
+}
+
+if(typ===11){
+
+let a=Math.floor(Math.random()*10)+1;
 
 let b=Math.floor(Math.random()*10)+1;
 
-let x=Math.floor(Math.random()*8)+1;
-
-aktuelleLoesung=String(a*x+b);
+aktuelleLoesung=String(4*a+b);
 
 document.getElementById("aufgabe").innerHTML=
-`Berechne:<br><br><b>${a}x + ${b}</b><br><br>für x = ${x}`;
+`Berechne:<br><br><b>4a + b</b><br><br>a = ${a}<br>b = ${b}`;
+
+}
 
 }
 
