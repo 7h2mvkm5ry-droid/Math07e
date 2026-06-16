@@ -658,7 +658,44 @@ document.getElementById("feedback").innerHTML =
 }
 
 
+function termAuswerten(term,x){
 
+term = term.replace(/\s+/g,"");
+
+term = term.replace(/(\d)(x)/g,"$1*$2");
+term = term.replace(/x/g,"("+x+")");
+
+try{
+return Function("return "+term)();
+}
+catch{
+return null;
+}
+
+}
+
+function termeGleich(term1,term2){
+
+for(let i=0;i<5;i++){
+
+let x=Math.floor(Math.random()*20)+1;
+
+let a=termAuswerten(term1,x);
+let b=termAuswerten(term2,x);
+
+if(a===null || b===null){
+return false;
+}
+
+if(Math.abs(a-b)>0.0001){
+return false;
+}
+
+}
+
+return true;
+
+}
 function pruefen(){
 
 const eingabe =
@@ -670,6 +707,33 @@ const loesung =
 normalisiere(aktuelleLoesung);
 
 
+
+if(modus==="aufstellen"){
+
+if(termeGleich(eingabe,loesung)){
+
+punkte++;
+
+aktualisierePunkte();
+
+if(eingabe===loesung){
+
+document.getElementById("feedback").innerHTML =
+"✅ Richtig! +1 Punkt";
+
+}else{
+
+document.getElementById("feedback").innerHTML =
+"✅ Inhaltlich richtig! +1 Punkt<br><br>💡 Übliche Schreibweise: "
++ aktuelleLoesung;
+
+}
+
+return;
+
+}
+
+}else{
 
 if(eingabe===loesung){
 
@@ -684,28 +748,11 @@ return;
 
 }
 
-
-
-if(modus==="aufstellen"){
-
-if(
-eingabe==="x+x+x+5"
-&&
-loesung==="3x+5"
-){
-
-punkte++;
-
-aktualisierePunkte();
-
-document.getElementById("feedback").innerHTML =
-"✅ Inhaltlich richtig<br><br>💡 Übliche Schreibweise: 3x + 5";
-
-return;
-
 }
 
-}
+
+
+
 
 
 
