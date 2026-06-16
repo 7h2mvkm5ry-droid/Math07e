@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+button {
+    font-size: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    background: #2563eb;
+    color: white;
+}
