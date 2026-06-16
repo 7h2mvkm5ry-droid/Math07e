@@ -4,27 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MatheTrainer 7</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>📚 MatheTrainer 7</h1>
+<div class="container">
 
-        <p>
-            Terme und Gleichungen
-        </p>
+    <h1>📚 MatheTrainer 7</h1>
 
-        <div class="menu">
-            <button>Werte von Termen</button>
-            <button>Terme aufstellen</button>
-            <button>Terme vergleichen</button>
-            <button>Gleichungen lösen</button>
-        </div>
-    </div>
+    <h2>Werte von Termen berechnen</h2>
 
-    <script src="app.js"></script>
+    <p>
+        Berechne den Wert des Terms:
+    </p>
+
+    <h3 id="aufgabe">3x + 5</h3>
+
+    <p>
+        für x = <span id="wert">4</span>
+    </p>
+
+    <input
+        type="number"
+        id="antwort"
+        placeholder="Antwort eingeben">
+
+    <button onclick="pruefen()">
+        Prüfen
+    </button>
+
+    <p id="ergebnis"></p>
+
+</div>
+
+<script src="app.js"></script>
 
 </body>
 </html>

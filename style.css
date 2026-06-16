@@ -8,29 +8,28 @@ body {
 .container {
     max-width: 600px;
     margin: auto;
-}
-
-h1 {
     text-align: center;
 }
 
-p {
-    text-align: center;
-    color: #666;
-}
-
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
+input {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
 }
 
 button {
+    width: 100%;
+    padding: 15px;
     font-size: 20px;
-    padding: 20px;
     border: none;
-    border-radius: 15px;
+    border-radius: 12px;
     background: #2563eb;
     color: white;
+}
+
+#ergebnis {
+    font-size: 24px;
+    margin-top: 20px;
 }
