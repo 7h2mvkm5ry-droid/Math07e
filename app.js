@@ -1334,6 +1334,11 @@ return true;
 }
 function pruefen(){
 
+alert("Prüfen wurde geklickt");
+
+const eingabe =
+...
+
 const eingabe =
 normalisiere(
 document.getElementById("antwort").value
