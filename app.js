@@ -143,8 +143,6 @@ richtig:2
 
 function aktualisierePunkte(){
 
-document.getElementById("punkte").innerText =
-punkte;
 
 localStorage.setItem("punkte", punkte);
 
