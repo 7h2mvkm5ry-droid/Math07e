@@ -1336,8 +1336,6 @@ function pruefen(){
 
 alert("Prüfen wurde geklickt");
 
-const eingabe =
-...
 
 const eingabe =
 normalisiere(
