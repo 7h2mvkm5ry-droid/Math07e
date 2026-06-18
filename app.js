@@ -6,7 +6,14 @@ let aktuelleLoesung = "";
 
 let aktuelleAufgabe = null;
 
+let name =
+localStorage.getItem("spielerName") || "";
 
+let aufgaben =
+Number(localStorage.getItem("aufgaben") || 0);
+
+let versuche =
+Number(localStorage.getItem("versuche") || 0);
 
 const denkaufgaben = [
 
@@ -136,15 +143,57 @@ richtig:2
 
 function aktualisierePunkte(){
 
-document.getElementById("punkte").innerText = punkte;
+document.getElementById("punkte").innerText =
+punkte;
 
 localStorage.setItem("punkte", punkte);
+
+localStorage.setItem("aufgaben", aufgaben);
+
+localStorage.setItem("versuche", versuche);
+
+let quote = 0;
+
+if(versuche>0){
+quote =
+Math.round(
+aufgaben/versuche*100
+);
+}
+
+document.getElementById("punkteAnzeige").innerHTML =
+`
+👤 ${name || "Unbekannt"}
+<br>
+⭐ Punkte: ${punkte}
+<br>
+📝 Aufgaben: ${aufgaben}
+<br>
+🎯 Quote: ${quote} %
+`;
 
 }
 
 
-
 window.onload = function(){
+
+if(!name){
+
+name =
+prompt(
+"Bitte gib deinen Namen ein:"
+);
+
+if(name){
+
+localStorage.setItem(
+"spielerName",
+name
+);
+
+}
+
+}
 
 aktualisierePunkte();
 
@@ -1222,10 +1271,15 @@ pruefeMC(index);
 }
 function pruefeMC(index){
 
+versuche++;
+
 if(index===aktuelleAufgabe.richtig){
 
 punkte++;
 
+aufgaben++;
+
+aktualisierePunkte();
 aktualisierePunkte();
 
 document.getElementById("feedback").innerHTML =
@@ -1290,13 +1344,17 @@ document.getElementById("antwort").value
 const loesung =
 normalisiere(aktuelleLoesung);
 
+versuche++;
 
+aktualisierePunkte();
 
 if(modus==="aufstellen"){
 
 if(termeGleich(eingabe,loesung)){
 
 punkte++;
+
+aufgaben++;
 
 aktualisierePunkte();
 
@@ -1322,6 +1380,8 @@ return;
 if(eingabe===loesung){
 
 punkte++;
+
+aufgaben++;
 
 aktualisierePunkte();
 
