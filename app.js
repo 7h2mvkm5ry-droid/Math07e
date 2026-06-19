@@ -1334,8 +1334,6 @@ return true;
 }
 function pruefen(){
 
-alert("Prüfen wurde geklickt");
-
 
 const eingabe =
 normalisiere(
