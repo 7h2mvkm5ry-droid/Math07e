@@ -1362,6 +1362,10 @@ if(eingabe===loesung){
 document.getElementById("feedback").innerHTML =
 "✅ Richtig! +1 Punkt";
 
+setTimeout(function(){
+    naechsteAufgabe();
+}, 1000);
+
 }else{
 
 document.getElementById("feedback").innerHTML =
