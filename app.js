@@ -298,7 +298,10 @@ document.getElementById("antwort").value="";
 
 const mc =
 document.getElementById("multipleChoiceBereich");
-
+document.querySelectorAll(".antwortButton")
+.forEach(button => {
+    button.disabled = false;
+});
 const txt =
 document.getElementById("antwortBereich");
 
@@ -1267,7 +1270,13 @@ pruefeMC(index);
 }
 
 }
+
 function pruefeMC(index){
+
+document.querySelectorAll(".antwortButton")
+.forEach(button => {
+    button.disabled = true;
+});
 
 versuche++;
 
@@ -1278,16 +1287,22 @@ punkte++;
 aufgaben++;
 
 aktualisierePunkte();
-aktualisierePunkte();
 
 document.getElementById("feedback").innerHTML =
 "✅ Richtig! +1 Punkt";
+setTimeout(function(){
+    naechsteAufgabe();
+},1000);
 
 }
 else{
 
 document.getElementById("feedback").innerHTML =
-"❌ Noch nicht richtig.";
+"❌ Falsch";
+
+setTimeout(function(){
+    naechsteAufgabe();
+},1000);
 
 }
 
@@ -1372,6 +1387,10 @@ document.getElementById("feedback").innerHTML =
 "✅ Inhaltlich richtig! +1 Punkt<br><br>💡 Übliche Schreibweise: "
 + aktuelleLoesung;
 
+setTimeout(function(){
+    naechsteAufgabe();
+},1000);
+
 }
 
 return;
@@ -1390,7 +1409,9 @@ aktualisierePunkte();
 
 document.getElementById("feedback").innerHTML =
 "✅ Richtig! +1 Punkt";
-
+setTimeout(function(){
+    naechsteAufgabe();
+},1000);
 return;
 
 }
