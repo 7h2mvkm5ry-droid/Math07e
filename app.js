@@ -1408,7 +1408,7 @@ document.getElementById("feedback").innerHTML =
 "✅ Richtig! +1 Punkt";
 setTimeout(function(){
     naechsteAufgabe();
-},1000);
+},2000);
 
 }
 else{
@@ -1418,7 +1418,7 @@ document.getElementById("feedback").innerHTML =
 
 setTimeout(function(){
     naechsteAufgabe();
-},1000);
+},2000);
 
 }
 
@@ -1495,7 +1495,7 @@ document.getElementById("feedback").innerHTML =
 
 setTimeout(function(){
     naechsteAufgabe();
-}, 1000);
+}, 2000);
 
 }else{
 
@@ -1527,7 +1527,7 @@ document.getElementById("feedback").innerHTML =
 "✅ Richtig! +1 Punkt";
 setTimeout(function(){
     naechsteAufgabe();
-},1000);
+},2000);
 return;
 
 }
