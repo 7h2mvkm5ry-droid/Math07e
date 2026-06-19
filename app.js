@@ -1416,9 +1416,10 @@ else{
 document.getElementById("feedback").innerHTML =
 "❌ Falsch";
 
-setTimeout(function(){
-    naechsteAufgabe();
-},2000);
+document.querySelectorAll(".antwortButton")
+.forEach(button => {
+    button.disabled = false;
+});
 
 }
 
