@@ -1389,7 +1389,7 @@ document.getElementById("feedback").innerHTML =
 
 setTimeout(function(){
     naechsteAufgabe();
-},1000);
+},5000);
 
 }
 
