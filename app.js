@@ -1218,14 +1218,130 @@ pruefeMC(index);
 
 if(modus==="gleichungen"){
 
-let x=Math.floor(Math.random()*10)+1;
+let typ=Math.floor(Math.random()*10);
 
-let b=Math.floor(Math.random()*10)+1;
+let x,a,b,c;
+
+if(typ===0){
+
+x=Math.floor(Math.random()*10)+1;
+a=Math.floor(Math.random()*10)+1;
 
 aktuelleLoesung=String(x);
 
 document.getElementById("aufgabe").innerHTML=
-`Löse die Gleichung:<br><br><b>x + ${b} = ${x+b}</b>`;
+`Löse die Gleichung:<br><br><b>x + ${a} = ${x+a}</b>`;
+
+}
+
+if(typ===1){
+
+x=Math.floor(Math.random()*10)+5;
+a=Math.floor(Math.random()*5)+1;
+
+aktuelleLoesung=String(x);
+
+document.getElementById("aufgabe").innerHTML=
+`Löse die Gleichung:<br><br><b>x - ${a} = ${x-a}</b>`;
+
+}
+
+if(typ===2){
+
+x=Math.floor(Math.random()*10)+1;
+a=Math.floor(Math.random()*5)+2;
+
+aktuelleLoesung=String(x);
+
+document.getElementById("aufgabe").innerHTML=
+`Löse die Gleichung:<br><br><b>${a}x = ${a*x}</b>`;
+
+}
+
+if(typ===3){
+
+x=Math.floor(Math.random()*10)+1;
+a=3;
+
+aktuelleLoesung=String(x);
+
+document.getElementById("aufgabe").innerHTML=
+`Löse die Gleichung:<br><br><b>${a}x = ${a*x}</b>`;
+
+}
+
+if(typ===4){
+
+x=Math.floor(Math.random()*10)+1;
+a=2;
+b=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(x);
+
+document.getElementById("aufgabe").innerHTML=
+`Löse die Gleichung:<br><br><b>${a}x + ${b} = ${a*x+b}</b>`;
+
+}
+
+if(typ===5){
+
+x=Math.floor(Math.random()*10)+2;
+a=3;
+b=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(x);
+
+document.getElementById("aufgabe").innerHTML=
+`Löse die Gleichung:<br><br><b>${a}x - ${b} = ${a*x-b}</b>`;
+
+}
+
+if(typ===6){
+
+x=Math.floor(Math.random()*10)+1;
+a=5;
+b=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(x);
+
+document.getElementById("aufgabe").innerHTML=
+`Löse die Gleichung:<br><br><b>${a}x + ${b} = ${a*x+b}</b>`;
+
+}
+
+if(typ===7){
+
+x=Math.floor(Math.random()*10)+1;
+b=Math.floor(Math.random()*10)+1;
+
+aktuelleLoesung=String(x);
+
+document.getElementById("aufgabe").innerHTML=
+`Löse die Gleichung:<br><br><b>2x + ${b} = x + ${x+b}</b>`;
+
+}
+
+if(typ===8){
+
+x=Math.floor(Math.random()*10)+2;
+
+aktuelleLoesung=String(x);
+
+document.getElementById("aufgabe").innerHTML=
+`Löse die Gleichung:<br><br><b>3x - 4 = x + ${2*x-4}</b>`;
+
+}
+
+if(typ===9){
+
+x=Math.floor(Math.random()*10)+2;
+
+aktuelleLoesung=String(x);
+
+document.getElementById("aufgabe").innerHTML=
+`Löse die Gleichung:<br><br><b>4x + 2 = 2x + ${2*x+2}</b>`;
+
+}
 
 }
 
